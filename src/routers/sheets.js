@@ -3,7 +3,7 @@ const { google } = require('googleapis');
 //const credentials = require('../token.json'); // Replace with the correct path
 //const sheets = google.sheets('v4');
 require("dotenv").config();
-
+const file_path = process.env.file_path;
 const save_in_data = async(req) => {
 
 
@@ -14,7 +14,7 @@ const save_in_data = async(req) => {
 
 
 
-    const auth = new google.auth.GoogleAuth({ keyFile: "token.json", scopes: ['https://www.googleapis.com/auth/spreadsheets'] });
+    const auth = new google.auth.GoogleAuth({ keyFile: file_path, scopes: ['https://www.googleapis.com/auth/spreadsheets'] });
 
     const auth_client_object = await auth.getClient();
     const spreadsheetId = process.env.spreadsheet_id;
