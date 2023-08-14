@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Google Translate</title>
+</head>
+<body>
+  <h1>Google Translate</h1>
+  <form action="/translate" method="post">
+    <label for="text">Enter Text:</label>
+    <textarea id="text" name="text" rows="4" cols="50"></textarea>
+    <br>
+    <label for="targetLang">Enter Target Language:</label>
+    <input type="text" id="targetLang" name="target" placeholder="e.g., en">
+    <br>
+    <button type="submit">Translate</button>
+  </form>
+  
+  {{#if translatedText}}
+  <div style="border: 1px solid #ccc; padding: 10px; margin-top: 20px;">
+    <h2>Translated Text:</h2>
+    <p>{{translatedText}}</p>
+  </div>
+  {{/if}}
+</body>
+</html>

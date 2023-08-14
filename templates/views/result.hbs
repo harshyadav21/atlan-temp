@@ -1,0 +1,25 @@
+{{!-- <h2>Submitted Data (JSON):</h2> --}}
+
+{{!-- <form action="/submit" method="post">
+  <!-- ... (form fields) -->
+  <button type="submit">Submit</button>
+</form> --}}
+
+<html>
+<head>
+  <title>Thank You</title>
+</head>
+<body>
+  <div style="text-align: center; padding: 50px;">
+    <h1>Thank you for submitting the details!</h1>
+    <p>Your information has been successfully received.</p>
+    <a href="/">Return to Form for another response</a>
+  </div>
+  
+</body>
+</html>
+
+{{#if formData}}
+
+<pre>{{{ formData }}}</pre>
+{{/if}}

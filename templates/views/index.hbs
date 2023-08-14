@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Employee Form</title>
+  <style>
+    body {
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: inline-block;
+      text-align: left;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: inline-block;
+      width: 100px;
+      text-align: right;
+      margin-right: 10px;
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    input[type="number"] {
+      width: 200px;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+
+    button[type="submit"] {
+      display: block;
+      margin-top: 10px;
+      
+    }
+  </style>
+</head>
+<body>
+    <button onclick="navigateToTranslate()">For Translation help</button>
+
+  <script>
+    function navigateToTranslate() {
+      window.location.href = '/translate'; // Replace with your actual translate URL
+    }
+  </script>
+  <h1>Employee Details Form</h1>
+  <form action="/students" method="post">
+    <label for="name">Name:</label>
+    <input type="text" name="name" required><br>
+
+    <label for="phone">Phone:</label>
+    <input type="tel" name="phone" required><br>
+
+    <label for="email">Email:</label>
+    <input type="email" name="email" required><br>
+
+    <label for="address">Address:</label>
+    <input type="text" name="address" required><br>
+
+    <label for="income">Income:</label>
+    <input type="number" name="income" required><br>
+
+    <label for="saving">Savings:</label>
+    <input type="number" name="savings" required><br>
+
+    <button type="submit">Submit</button>
+  </form>
+  
+</body>
+</html>
